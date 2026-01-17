@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Navigation */
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    padding: 0 20px;
+}
+
+nav ul li {
+    padding: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #1DB954; /* Spotify Green */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Main Container */
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 25px auto;
+    width: 90%;
+    border-radius: 15px;
+    padding: 30px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.SongList {
+    width: 100%;
+}
+
+.SongList h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Song Items */
+.songItemContainer {
+    margin-top: 20px;
+}
+
+.songItem {
+    height: 60px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    color: white;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.songItem:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
+}
+
+.songItem img {
+    width: 40px;
+    border-radius: 5px;
+}
+
+.songName {
+    flex-grow: 1;
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+}
+
+.timestamp i {
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.timestamp i:hover {
+    color: #1DB954;
+}
+
+/* Bottom Controls */
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 120px;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#myProgressBar {
+    width: 75vw;
+    height: 5px;
+    cursor: pointer;
+    accent-color: #1DB954; /* Colors the slider green */
+}
+
+.icon {
+    margin: 15px 0;
+}
+
+.icon i {
+    cursor: pointer;
+    margin: 0 15px;
+    transition: transform 0.2s;
+}
+
+.icon i:hover {
+    transform: scale(1.1);
+    color: #1DB954;
+}
+
+/* Song Info Display */
+.songInfo {
+    position: absolute;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.songInfo img {
+    margin-right: 15px;
+    opacity: 0;
+    /* Opacity controlled via JS */
+}
+
+#masterSongName {
+    font-weight: bold;
+}
