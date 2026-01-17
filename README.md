@@ -7,7 +7,7 @@ This project demonstrates core front-end concepts such as DOM manipulation, even
 
 ## 📸 Demo
 
-![Spotify Clone Demo](public/Screenshot 2026-01-17 212209.png)
+![Spotify Clone Demo](public/Screenshot%202026-01-17%20212209.png)
 
 
 ---
